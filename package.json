@@ -1,0 +1,31 @@
+{
+  "name": "react-use-favicon",
+  "version": "0.0.0",
+  "description": "React hook to dynamically update favicon",
+  "author": "William Grosset (https://williamgrosset.com)",
+  "repository": {
+    "type": "git",
+    "url": "git:https://github.com/williamgrosset/react-use-favicon.git"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "rollup -c",
+    "clean": "rm -rf ./dist"
+  },
+  "devDependencies": {
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/react": "^18.2.61",
+    "@types/react-dom": "^18.2.19",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rollup": "^4.12.0",
+    "tslib": "^2.6.2",
+    "typescript": "^5.3.3"
+  },
+  "peerDependencies": {
+    "react": "^16.8 || ^ 17.0 || ^18.0",
+    "react-dom": "^16.8 || ^ 17.0 || ^18.0"
+  }
+}
