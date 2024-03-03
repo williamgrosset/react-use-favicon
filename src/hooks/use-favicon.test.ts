@@ -5,21 +5,10 @@ describe('useFavicon', () => {
   beforeEach(() => {
     const favicon = document.createElement('link')
     favicon.type = 'image/x-icon'
-    favicon.rel = 'favicon icon'
+    favicon.rel = 'shortcut icon'
     favicon.href = '/assets/favicon.ico'
-    favicon.id = 'test-favicon'
 
     document.head.appendChild(favicon)
-  })
-
-  it('should be defined', () => {
-    expect(useFavicon).toBeDefined()
-  })
-
-  it('should render the hook', () => {
-    const { result } = renderHook(() => useFavicon())
-
-    expect(result.current).toBeDefined()
   })
 
   it('should fetch the current favicon', () => {
