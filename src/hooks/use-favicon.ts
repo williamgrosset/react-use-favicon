@@ -36,8 +36,10 @@ export default function useFavicon(): UseFavicon {
     const link =
       document.querySelector<HTMLLinkElement>("link[rel*='icon']") ?? undefined
 
-    if (link) {
+    if (link && link.href !== originalHref) {
       link.href = originalHref
+
+      document.head.appendChild(link)
       setFavicon(link)
     }
   }
