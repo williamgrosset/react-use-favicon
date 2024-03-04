@@ -14,9 +14,7 @@ describe('useFavicon', () => {
   it('should fetch the current favicon', () => {
     const { result } = renderHook(() => useFavicon())
 
-    expect(result.current.favicon?.href).toBe(
-      'http://localhost/assets/favicon.ico'
-    )
+    expect(result.current.url).toBe('http://localhost/assets/favicon.ico')
   })
 
   it('should update the favicon', () => {
@@ -26,9 +24,7 @@ describe('useFavicon', () => {
       result.current.update('/assets/favicon-two.ico')
     })
 
-    expect(result.current.favicon?.href).toBe(
-      'http://localhost/assets/favicon-two.ico'
-    )
+    expect(result.current.url).toBe('http://localhost/assets/favicon-two.ico')
   })
 
   it('should restore the favicon', () => {
@@ -39,8 +35,6 @@ describe('useFavicon', () => {
       result.current.restore()
     })
 
-    expect(result.current.favicon?.href).toBe(
-      'http://localhost/assets/favicon.ico'
-    )
+    expect(result.current.url).toBe('http://localhost/assets/favicon.ico')
   })
 })

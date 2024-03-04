@@ -1,22 +1,22 @@
 import { useState, useEffect } from 'react'
 
 interface UseFavicon {
-  favicon?: HTMLLinkElement
+  url: string
   update: (src: string) => void
   restore: () => void
 }
 
 export default function useFavicon(): UseFavicon {
-  const [favicon, setFavicon] = useState<HTMLLinkElement | undefined>()
-  const [originalHref, setOriginalHref] = useState<string>('')
+  const [faviconUrl, setFaviconUrl] = useState<string>('')
+  const [originalUrl, setOriginalUrl] = useState<string>('')
 
   useEffect(() => {
     const link =
       document.querySelector<HTMLLinkElement>("link[rel*='icon']") ?? undefined
 
     if (link) {
-      setFavicon(link)
-      setOriginalHref(link.href)
+      setFaviconUrl(link.href)
+      setOriginalUrl(link.href)
     }
   }, [])
 
@@ -29,23 +29,23 @@ export default function useFavicon(): UseFavicon {
     link.href = src
 
     document.head.appendChild(link)
-    setFavicon(link)
+    setFaviconUrl(link.href)
   }
 
   const restore = () => {
     const link =
       document.querySelector<HTMLLinkElement>("link[rel*='icon']") ?? undefined
 
-    if (link && link.href !== originalHref) {
-      link.href = originalHref
+    if (link && link.href !== originalUrl) {
+      link.href = originalUrl
 
       document.head.appendChild(link)
-      setFavicon(link)
+      setFaviconUrl(link.href)
     }
   }
 
   return {
-    favicon,
+    url: faviconUrl,
     update,
     restore
   }
