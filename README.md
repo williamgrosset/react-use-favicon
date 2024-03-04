@@ -1,6 +1,12 @@
 <h1 align="center">react-use-favicon</h1>
 
 <p align="center">
+  <img src="assets/reddit-default.svg" height="120px" alt="Reddit favicon" />
+  <img src="assets/reddit-warning.svg" height="120px" alt="Reddit warning favicon" />
+  <img src="assets/reddit-success.svg" height="120px" alt="Reddit success favicon" />
+</p>
+
+<p align="center">
   <img src="https://img.shields.io/github/actions/workflow/status/williamgrosset/react-use-favicon/playwright.yml" alt="Build status" />
   <img src="https://img.shields.io/badge/dependencies-0-brightgreen" alt="Dependencies" />
   <img src="https://img.shields.io/bundlephobia/minzip/react-use-favicon?color=%234ba0f6" alt="Build size" />
