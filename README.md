@@ -19,17 +19,17 @@
 
 ### Install
 
-Install the `react-use-favicon` package:
+Install the `@williamgrosset/react-use-favicon` package:
 
 ```bash
 # npm
-npm install react-use-favicon
+npm install @williamgrosset/react-use-favicon
 
 # yarn
-yarn add react-use-favicon
+yarn add @williamgrosset/react-use-favicon
 
 # pnpm
-pnpm add react-use-favicon
+pnpm add @williamgrosset/react-use-favicon
 ```
 
 ### Import
@@ -37,7 +37,7 @@ pnpm add react-use-favicon
 Import the `useFavicon` hook:
 
 ```tsx
-import useFavicon from 'react-use-favicon'
+import useFavicon from '@williamgrosset/react-use-favicon'
 
 export default function App() {
   const { url, update, restore } = useFavicon()

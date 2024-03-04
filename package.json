@@ -6,7 +6,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git:https://github.com/williamgrosset/react-use-favicon.git"
+    "url": "git+https://github.com/williamgrosset/react-use-favicon.git"
+  },
+  "bugs": {
+    "url": "https://github.com/williamgrosset/react-use-favicon/issues"
   },
   "keywords": [
     "react",
