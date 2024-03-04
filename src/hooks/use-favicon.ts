@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 
 interface UseFavicon {
   url: string
@@ -6,35 +6,40 @@ interface UseFavicon {
   restore: () => void
 }
 
-export default function useFavicon(): UseFavicon {
+const FAVICON_SELECTOR = "link[rel*='icon']"
+
+export default function useFavicon(
+  selectors: string = FAVICON_SELECTOR
+): UseFavicon {
   const [url, setUrl] = useState<string>('')
   const [originalUrl, setOriginalUrl] = useState<string>('')
 
   useEffect(() => {
-    const link =
-      document.querySelector<HTMLLinkElement>("link[rel*='icon']") ?? undefined
+    const link = document.querySelector<HTMLLinkElement>(selectors) ?? undefined
 
     if (link) {
       setUrl(link.href)
       setOriginalUrl(link.href)
     }
-  }, [])
+  }, [selectors])
 
-  const update = (src: string) => {
-    const link =
-      document.querySelector<HTMLLinkElement>("link[rel*='icon']") ??
-      document.createElement('link')
-    link.type = 'image/x-icon'
-    link.rel = 'shortcut icon'
-    link.href = src
+  const update = useCallback(
+    (src: string) => {
+      const link =
+        document.querySelector<HTMLLinkElement>(selectors) ??
+        document.createElement('link')
+      link.type = 'image/x-icon'
+      link.rel = 'shortcut icon'
+      link.href = src
 
-    document.head.appendChild(link)
-    setUrl(link.href)
-  }
+      document.head.appendChild(link)
+      setUrl(link.href)
+    },
+    [selectors]
+  )
 
-  const restore = () => {
-    const link =
-      document.querySelector<HTMLLinkElement>("link[rel*='icon']") ?? undefined
+  const restore = useCallback(() => {
+    const link = document.querySelector<HTMLLinkElement>(selectors) ?? undefined
 
     if (link && link.href !== originalUrl) {
       link.href = originalUrl
@@ -42,7 +47,7 @@ export default function useFavicon(): UseFavicon {
       document.head.appendChild(link)
       setUrl(link.href)
     }
-  }
+  }, [selectors, originalUrl])
 
   return {
     url,

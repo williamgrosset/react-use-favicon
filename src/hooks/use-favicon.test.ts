@@ -37,4 +37,10 @@ describe('useFavicon', () => {
 
     expect(result.current.url).toBe('http://localhost/assets/favicon.ico')
   })
+
+  it('should support a custom selector', () => {
+    const { result } = renderHook(() => useFavicon("link[rel='shortcut icon']"))
+
+    expect(result.current.url).toBe('http://localhost/assets/favicon.ico')
+  })
 })
