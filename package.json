@@ -23,7 +23,8 @@
   "scripts": {
     "build": "rollup -c",
     "test": "jest",
-    "clean": "rm -rf ./dist"
+    "clean": "rm -rf ./dist",
+    "prepublish": "pnpm clean && pnpm build"
   },
   "jest": {
     "preset": "ts-jest",
