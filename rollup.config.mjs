@@ -7,5 +7,6 @@ export default {
     file: 'dist/index.js',
     format: 'es'
   },
-  plugins: [typescript(), terser()]
+  plugins: [typescript(), terser()],
+  external: ['react']
 }

@@ -3,8 +3,8 @@
 <p align="center">
   <img src="https://img.shields.io/github/actions/workflow/status/williamgrosset/react-use-favicon/test.yml" alt="Build status" />
   <img src="https://img.shields.io/badge/dependencies-0-brightgreen" alt="Dependencies" />
-  <img src="https://img.shields.io/bundlephobia/minzip/react-use-favicon?color=%234ba0f6" alt="Build size" />
-  <img src="https://img.shields.io/npm/dt/react-use-favicon?color=%234ba0f6" alt="Package downloads" />
+  <img src="https://img.shields.io/bundlephobia/minzip/@williamgrosset/react-use-favicon?color=%234ba0f6" alt="Build size" />
+  <img src="https://img.shields.io/npm/dt/@williamgrosset/react-use-favicon?color=%234ba0f6" alt="Package downloads" />
 </p>
 
 <p align="center">
