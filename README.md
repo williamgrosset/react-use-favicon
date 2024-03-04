@@ -1,16 +1,16 @@
 <h1 align="center">react-use-favicon</h1>
 
 <p align="center">
-  <img src="assets/reddit-default.svg" height="120px" alt="Reddit favicon" />
-  <img src="assets/reddit-warning.svg" height="120px" alt="Reddit warning favicon" />
-  <img src="assets/reddit-success.svg" height="120px" alt="Reddit success favicon" />
-</p>
-
-<p align="center">
   <img src="https://img.shields.io/github/actions/workflow/status/williamgrosset/react-use-favicon/playwright.yml" alt="Build status" />
   <img src="https://img.shields.io/badge/dependencies-0-brightgreen" alt="Dependencies" />
   <img src="https://img.shields.io/bundlephobia/minzip/react-use-favicon?color=%234ba0f6" alt="Build size" />
   <img src="https://img.shields.io/npm/dt/react-use-favicon?color=%234ba0f6" alt="Package downloads" />
+</p>
+
+<p align="center">
+  <img src="assets/reddit-default.svg" height="120px" alt="Reddit favicon" />
+  <img src="assets/reddit-warning.svg" height="120px" alt="Reddit warning favicon" />
+  <img src="assets/reddit-success.svg" height="120px" alt="Reddit success favicon" />
 </p>
 
 <p align="center">✨ A React hook to dynamically update your page’s favicon.</p>
@@ -56,13 +56,15 @@ export default function App() {
 
 `useFavicon` hook returns:
 
-| Prop      | Type                    | Description             |
-| --------- | ----------------------- | ----------------------- |
-| `url`     | `string`                | Current favicon URL     |
-| `update`  | `(src: string) => void` | Update the favicon URL  |
-| `restore` | `() => void`            | Restore the favicon URL |
+| Prop      | Type                    | Default | Description             |
+| --------- | ----------------------- | ------- | ----------------------- |
+| `url`     | `string`                | `''`    | Current favicon URL     |
+| `update`  | `(src: string) => void` | -       | Update the favicon URL  |
+| `restore` | `() => void`            | -       | Restore the favicon URL |
 
-### Arguments
+### Parameters
+
+`useFavicon` hook options:
 
 | Prop        | Type     | Default               | Description                                                                                                                           |
 | ----------- | -------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
@@ -85,7 +87,7 @@ pnpm test
 
 ### Demo
 
-Inside the `demo` directory:
+Within `demo/`:
 
 ```
 pnpm install
