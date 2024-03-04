@@ -3,10 +3,21 @@
   "version": "0.0.0",
   "description": "React hook to dynamically update favicon",
   "author": "William Grosset (https://williamgrosset.com)",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git:https://github.com/williamgrosset/react-use-favicon.git"
   },
+  "keywords": [
+    "react",
+    "hook",
+    "favicon",
+    "use-favicon",
+    "typescript"
+  ],
+  "files": [
+    "dist"
+  ],
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
