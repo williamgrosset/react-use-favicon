@@ -21,8 +21,8 @@
   "files": [
     "dist"
   ],
-  "type": "module",
   "main": "dist/index.js",
+  "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "rollup -c",
