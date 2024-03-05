@@ -1,4 +1,4 @@
-import typescript from '@rollup/plugin-typescript'
+import ts from 'rollup-plugin-ts'
 import terser from '@rollup/plugin-terser'
 
 export default {
@@ -7,6 +7,6 @@ export default {
     file: 'dist/index.js',
     format: 'es'
   },
-  plugins: [typescript(), terser()],
+  plugins: [ts(), terser()],
   external: ['react']
 }
