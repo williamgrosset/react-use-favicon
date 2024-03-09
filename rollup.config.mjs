@@ -6,11 +6,13 @@ export default {
   output: [
     {
       file: 'dist/index.js',
-      format: 'cjs'
+      format: 'cjs',
+      sourcemap: true
     },
     {
       file: 'dist/index.mjs',
-      format: 'es'
+      format: 'es',
+      sourcemap: true
     }
   ],
   plugins: [ts(), terser()],
