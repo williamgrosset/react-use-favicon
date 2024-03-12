@@ -1,4 +1,4 @@
-import useFavicon from 'react-use-favicon'
+import useFavicon from '@williamgrosset/react-use-favicon'
 import './App.css'
 
 function App() {
