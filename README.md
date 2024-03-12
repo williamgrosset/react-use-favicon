@@ -13,7 +13,7 @@
   <img src="assets/reddit-success.svg" height="120px" alt="Reddit success favicon" />
 </p>
 
-<p align="center">✨ A React hook to dynamically update your page’s favicon.</p>
+<p align="center">✨ React hook to dynamically update your page’s favicon.</p>
 
 ## Usage
 
@@ -22,14 +22,7 @@
 Install the `@williamgrosset/react-use-favicon` package:
 
 ```bash
-# npm
 npm install @williamgrosset/react-use-favicon
-
-# yarn
-yarn add @williamgrosset/react-use-favicon
-
-# pnpm
-pnpm add @williamgrosset/react-use-favicon
 ```
 
 ### Import
@@ -37,6 +30,7 @@ pnpm add @williamgrosset/react-use-favicon
 Import the `useFavicon` hook:
 
 ```tsx
+import React from 'react'
 import useFavicon from '@williamgrosset/react-use-favicon'
 
 export default function App() {
@@ -56,11 +50,11 @@ export default function App() {
 
 `useFavicon` hook returns:
 
-| Prop      | Type                    | Default | Description             |
-| --------- | ----------------------- | ------- | ----------------------- |
-| `url`     | `string`                | `''`    | Current favicon URL     |
-| `update`  | `(src: string) => void` | -       | Update the favicon URL  |
-| `restore` | `() => void`            | -       | Restore the favicon URL |
+| Prop      | Type                    | Default | Description         |
+| --------- | ----------------------- | ------- | ------------------- |
+| `url`     | `string`                | `''`    | Current favicon URL |
+| `update`  | `(src: string) => void` | -       | Update the favicon  |
+| `restore` | `() => void`            | -       | Restore the favicon |
 
 ### Parameters
 
@@ -87,7 +81,7 @@ pnpm test
 
 ### Demo
 
-Within `demo/`:
+Within `demo` directory:
 
 ```
 pnpm install
